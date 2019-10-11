@@ -13,9 +13,11 @@
     <tr>
     {% if item.done %}
     <td><strike>{{item.name}}</strike></td>
+    <td><form action="toggle/{{ item.id }}" method="POST">{% csrf_token %}<input type="submit" value="Toggle"></form></td>
     <td><form><input type="submit" value="Edit"></form></td>
     {% else %}
     <td>{{item.name}}</td>
+    <td><form action="toggle/{{ item.id }}" method="POST">{% csrf_token %}<input type="submit" value="Toggle"></form></td>
     <td><form method="GET" action="edit/{{ item.id }}"><input type="submit" value="Edit"></form></td>
     {% endif %}
     </tr>
