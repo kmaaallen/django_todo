@@ -27,7 +27,7 @@ SECRET_KEY = os.environ.et('SECRET')
 DEBUG = True
 
 ALLOWED_HOSTS = [os.environ.get('C9_HOSTNAME'), os.environ.get('HOSTNAME')]
-#['localhost', 'kirsten-django-todo.herokuapp.com']
+#['localhost', 'kirsten-django-todo.herokuapp.com']#
 
 
 # Application definition
